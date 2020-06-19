@@ -68,12 +68,12 @@ class _HomeState extends State<Home> {
             SizedBox(
               height: 20.0,
             ),
-            Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Container(
-                    height: 170.0,
+            Container(
+              height: MediaQuery.of(context).size.height * 0.59,
+              child: ListView(
+                children: <Widget>[
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.24,
                     width: MediaQuery.of(context).size.width * 0.90,
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -143,13 +143,10 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Container(
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Container(
                     width: MediaQuery.of(context).size.width * 0.90,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25.0),
@@ -202,13 +199,10 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Container(
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Container(
                     width: MediaQuery.of(context).size.width * 0.90,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25.0),
@@ -261,8 +255,8 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
@@ -277,7 +271,6 @@ class _HomeState extends State<Home> {
                 icon: Icon(Icons.message), title: SizedBox.shrink()),
             BottomNavigationBarItem(
                 icon: Icon(Icons.account_circle), title: SizedBox.shrink()),
-            
           ]),
     );
   }
